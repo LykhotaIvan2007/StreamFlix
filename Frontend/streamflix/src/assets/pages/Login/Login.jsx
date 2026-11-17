@@ -6,9 +6,9 @@ export default function Login() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
-                <Link className={styles.logo} to="/" aria-label="StreamFlix home">
+                <p className={styles.logo}>
                     STREAMFLIX
-                </Link>
+                </p>
             </header>
 
             <main className={styles.main}>
@@ -45,6 +45,10 @@ export default function Login() {
                             placeholder="Enter your password"
                             autoComplete="current-password"
                         />
+
+                        <Link className={styles.forgotPassword} to="/change-password">
+                            Forgot password?
+                        </Link>
 
                         <button className={styles.submitButton} type="button">
                             Sign in

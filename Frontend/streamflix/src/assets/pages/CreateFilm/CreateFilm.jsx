@@ -38,9 +38,9 @@ export default function CreateFilm() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
-                <Link to="/" className={styles.logo}>
+                <p className={styles.logo}>
                     STREAMFLIX
-                </Link>
+                </p>
 
                 <Link to="/" className={styles.backLink}>
                     ← Back to catalogue

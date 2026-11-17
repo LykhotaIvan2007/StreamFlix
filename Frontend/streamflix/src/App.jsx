@@ -7,7 +7,8 @@ import Home from './assets/pages/Home/Home.jsx';
 import Profile from './assets/pages/Profile/Profile.jsx';
 import CreateProfile from './assets/pages/CreateProfile/CreateProfile.jsx';
 import CreateFilm from "./assets/pages/CreateFilm/CreateFilm";
-
+import ActivateAccount from "./assets/pages/ActivateAccount/ActivateAccount";
+import ChangePassword from "./assets/pages/ChangePassword/ChangePassword";
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/create-profile" element={<CreateProfile />} />
               <Route path="/create-film" element={<CreateFilm />} />
+              <Route path="/activate-account" element={<ActivateAccount />} />
+              <Route path="/change-password" element={<ChangePassword />} />
           </Routes>
       </Router>
   )

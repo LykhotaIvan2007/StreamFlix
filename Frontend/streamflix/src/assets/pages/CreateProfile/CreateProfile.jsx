@@ -6,9 +6,9 @@ export default function CreateProfile() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
-                <Link className={styles.logo} to="/">
+                <p className={styles.logo}>
                     STREAMFLIX
-                </Link>
+                </p>
             </header>
 
             <main className={styles.main}>

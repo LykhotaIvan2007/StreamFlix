@@ -1,0 +1,122 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 48px;
+}
+
+.logo {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 40px 24px 80px;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 48px 36px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 20px;
+  background: var(--color-surface);
+  box-shadow: 0 16px 48px var(--color-shadow);
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.title {
+  margin: 16px 0;
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.activateButton {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 32px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: var(--color-primary-hover);
+  }
+
+  &:active {
+    background: var(--color-primary-active);
+  }
+}
+
+.note {
+  margin: 24px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-divider);
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.logo,
+.activateButton {
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 24px 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .main {
+    padding: 24px 16px 48px;
+  }
+
+  .card {
+    padding: 36px 24px;
+    border-radius: 16px;
+  }
+}

@@ -58,6 +58,9 @@ The frontend communicates with the backend API. It does not connect directly to 
 | Image upload | Not implemented |
 | Video player | Visual mockup without video playback |
 | Age-based content restrictions | Not implemented |
+| Account activation | Interface only; token handling and API integration are not implemented |
+| Password reset | New-password form layout; submission and token validation are not implemented |
+| Password recovery email | Not implemented |
 
 > A visible button or form does not necessarily mean that its backend functionality is available.
 
@@ -293,6 +296,10 @@ Routes are defined in `App.jsx` using `BrowserRouter`, `Routes`, and `Route`.
 | `/profile` | Profile |
 | `/create-profile` | CreateProfile |
 | `/create-film` | CreateFilm |
+| `/activate-account` | ActivateAccount |
+| `/change-password` | ChangePassword — forgotten-password reset form |
+
+
 
 ### Internal links
 

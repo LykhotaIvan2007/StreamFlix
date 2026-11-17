@@ -106,14 +106,6 @@ cp .env.example .env
 
 Alternatively, duplicate the file through your editor and rename the copy.
 
-Fill in the values in `.env`:
-
-```dotenv
-POSTGRES_DB=streamflix
-POSTGRES_USER=streamflix_user
-POSTGRES_PASSWORD=replace_with_your_local_password
-POSTGRES_PORT=5433
-```
 
 | Variable | Purpose |
 |---|---|

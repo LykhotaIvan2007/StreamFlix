@@ -6,9 +6,9 @@ export default function Registration() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
-                <a className={styles.logo} href="/" aria-label="StreamFlix home">
+                <p className={styles.logo}>
                     STREAMFLIX
-                </a>
+                </p>
             </header>
 
             <main className={styles.main}>

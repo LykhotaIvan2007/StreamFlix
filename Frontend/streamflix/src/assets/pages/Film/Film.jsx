@@ -132,16 +132,6 @@ export default function Film() {
                                 <button
                                     className={styles.controlButton}
                                     type="button"
-                                    aria-label="Pause"
-                                >
-                                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
-                                    </svg>
-                                </button>
-
-                                <button
-                                    className={styles.controlButton}
-                                    type="button"
                                     aria-label="Forward 10 seconds"
                                 >
                                     <svg viewBox="0 0 24 24" aria-hidden="true">
