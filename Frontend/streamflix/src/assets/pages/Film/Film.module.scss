@@ -1,0 +1,359 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+          radial-gradient(
+                  ellipse at 50% 0%,
+                  var(--color-primary-glow),
+                  transparent 60%
+          ),
+          var(--color-background);
+  color: var(--color-text);
+}
+
+.header {
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.logo {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 6px;
+  }
+}
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 32px 72px;
+}
+
+.filmInfo {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.poster {
+  display: block;
+  width: 190px;
+  aspect-ratio: 2 / 3;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 10px;
+  background: var(--color-input-background);
+  box-shadow: 0 16px 40px var(--color-shadow);
+}
+
+.details {
+  min-width: 0;
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.title {
+  margin: 14px 0 20px;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  overflow-wrap: anywhere;
+}
+
+.metadata {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.ageRating {
+  padding: 4px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.description {
+  margin: 22px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.player {
+  overflow: hidden;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: 0 24px 80px var(--color-shadow);
+}
+
+.screen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--color-input-background);
+}
+
+.scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.screenOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+          to bottom,
+          var(--color-shadow),
+          transparent 40%,
+          var(--color-shadow)
+  );
+}
+
+.previewLabel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.centerPlay {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+          background-color 0.2s ease,
+          transform 0.2s ease;
+
+  svg {
+    width: 38px;
+    height: 38px;
+    margin-left: 4px;
+    fill: currentColor;
+  }
+
+  &:hover {
+    background: var(--color-primary-hover);
+    transform: scale(1.05);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 5px;
+  }
+}
+
+.screenTitle {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.controls {
+  padding: 16px 24px 20px;
+}
+
+.timeline {
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin: 0 0 12px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+          background-color 0.2s ease,
+          color 0.2s ease;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+  }
+
+  span {
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    background: var(--color-input-background-focus);
+    color: var(--color-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 2px;
+  }
+}
+
+.timeDisplay {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 6px;
+  background: var(--color-input-background);
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.currentTime {
+  color: var(--color-text);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 24px;
+  }
+
+  .main {
+    padding: 28px 20px 48px;
+  }
+
+  .filmInfo {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .poster {
+    width: 140px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .centerPlay {
+    width: 56px;
+    height: 56px;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .previewLabel {
+    top: 12px;
+    left: 12px;
+    font-size: 9px;
+  }
+
+  .screenTitle {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    font-size: 13px;
+  }
+
+  .controls {
+    padding: 12px;
+  }
+
+  .controlsRow {
+    gap: 10px;
+  }
+
+  .buttons {
+    gap: 4px;
+  }
+
+  .timeDisplay {
+    margin-left: auto;
+    font-size: 12px;
+  }
+}

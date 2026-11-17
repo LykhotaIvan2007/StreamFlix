@@ -1,0 +1,63 @@
+.card {
+  display: block;
+  min-width: 0;
+  color: var(--color-text);
+  text-decoration: none;
+
+  &:hover .image {
+    transform: scale(1.04);
+  }
+
+  &:hover .imageWrapper {
+    border-color: var(--color-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
+}
+
+.imageWrapper {
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 8px;
+  background: var(--color-input-background);
+  transition: border-color 0.2s ease;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.title {
+  margin: 14px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.genre {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image,
+  .imageWrapper {
+    transition: none;
+  }
+
+  .card:hover .image {
+    transform: none;
+  }
+}

@@ -1,0 +1,251 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+          radial-gradient(
+                  ellipse at 50% 0%,
+                  var(--color-primary-glow),
+                  transparent 60%
+          ),
+          var(--color-background);
+  color: var(--color-text);
+}
+
+.header {
+  padding: 28px 48px;
+}
+
+.logo {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 6px;
+  }
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px 64px;
+}
+
+.card {
+  width: 100%;
+  max-width: 540px;
+  padding: 40px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: 0 24px 80px var(--color-shadow);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.description {
+  margin: 0 0 32px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pictureRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-surface-border);
+  border-radius: 50%;
+  background: var(--color-input-background);
+  color: var(--color-text-secondary);
+
+  svg {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.pictureDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pictureButton {
+  min-height: 44px;
+  padding: 11px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-input-background);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-border-hover);
+    background: var(--color-input-background-focus);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+  }
+}
+
+.optionalText {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ageField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: var(--color-label);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ageInput {
+  width: 100%;
+  min-height: 54px;
+  padding: 15px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-input-background);
+  color: var(--color-text);
+  font: inherit;
+  color-scheme: dark;
+  transition:
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+
+  &::placeholder {
+    color: var(--color-placeholder);
+  }
+
+  &:hover {
+    border-color: var(--color-border-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 3px;
+    border-color: var(--color-text);
+    background: var(--color-input-background-focus);
+  }
+}
+
+.hint {
+  margin: 2px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.createButton {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 4px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: var(--color-primary-hover);
+  }
+
+  &:active {
+    background: var(--color-primary-active);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+  }
+}
+
+.cancelLink {
+  align-self: center;
+  padding: 8px 16px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    padding: 24px;
+  }
+
+  .main {
+    padding: 20px 20px 40px;
+  }
+
+  .card {
+    padding: 32px 24px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+}

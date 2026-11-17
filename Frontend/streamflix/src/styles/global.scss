@@ -1,0 +1,43 @@
+/* src/styles/global.scss */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+:root {
+  --color-background: #0b0b0b;
+  --color-text: #fff;
+  --color-primary: #e50914;
+  --color-primary-hover: #c11119;
+
+  --color-label: #e5e5e5;
+  --color-input-background: #191919;
+  --color-input-background-focus: #202020;
+  --color-border: #555;
+  --color-border-hover: #888;
+  --color-placeholder: #858585;
+  --color-primary-active: #a90e16;
+  --color-primary-glow: rgba(229, 9, 20, 0.14);
+  --color-surface: rgba(15, 15, 15, 0.95);
+  --color-surface-border: #292929;
+  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-text-secondary: #aaa;
+  --color-text-muted: #929292;
+  --color-divider: #222;
+}

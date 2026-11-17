@@ -1,0 +1,231 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+          radial-gradient(
+                  ellipse at 50% 0%,
+                  var(--color-primary-glow),
+                  transparent 55%
+          ),
+          var(--color-background);
+  color: var(--color-text);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 520px) 1fr;
+  align-items: start;
+  gap: 24px;
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.logo {
+  justify-self: start;
+  margin-top: 6px;
+  color: var(--color-primary);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 6px;
+  }
+}
+
+.searchArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.searchField {
+  position: relative;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 21px;
+  height: 21px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.searchInput {
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 16px 13px 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-input-background);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 14px;
+  color-scheme: dark;
+  transition: border-color 0.2s ease;
+
+  &::placeholder {
+    color: var(--color-placeholder);
+  }
+
+  &:hover {
+    border-color: var(--color-border-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 3px;
+  }
+}
+
+.filtersButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-input-background);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+
+  svg {
+    width: 19px;
+    height: 19px;
+
+    circle {
+      fill: var(--color-input-background);
+    }
+  }
+
+  &:hover {
+    border-color: var(--color-primary);
+    background: var(--color-input-background-focus);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+  }
+}
+
+.profileLink {
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover {
+    background: var(--color-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
+  }
+}
+
+.main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 48px 72px;
+}
+
+.heading {
+  margin: 0 0 28px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    grid-template-columns: 1fr auto;
+    padding: 24px 32px;
+  }
+
+  .searchArea {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 520px;
+    justify-self: center;
+  }
+
+  .profileLink {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .main {
+    padding: 32px 32px 56px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    gap: 24px 16px;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .profileLink {
+    width: 44px;
+    height: 44px;
+  }
+
+  .main {
+    padding: 28px 20px 48px;
+  }
+
+  .heading {
+    margin-bottom: 22px;
+    font-size: 23px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 14px;
+  }
+}
